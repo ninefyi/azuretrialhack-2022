@@ -1,8 +1,8 @@
-# Title azuretrialhack-2022
+# My project is for The Microsoft Azure Trial Hackathon on Dev.to
 
-## Dev.to: <https://dev.to/ninefyi/azure-trial-hackathon-sonarqube-community-branch-plugin-on-aks-4pjb-temp-slug-8928180/edit>
-## References: <https://github.com/mc1arke/sonarqube-community-branch-plugin>
-## Please install Azure-CLI before start: <https://docs.microsoft.com/en-us/cli/azure/install-azure-cli>
+- [Dev.to](https://dev.to/ninefyi/azure-trial-hackathon-sonarqube-community-branch-plugin-on-aks-4pjb-temp-slug-8928180)
+- [Plugin](https://github.com/mc1arke/sonarqube-community-branch-plugin)
+- [Azure-CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
 
 ### Instruction
 
