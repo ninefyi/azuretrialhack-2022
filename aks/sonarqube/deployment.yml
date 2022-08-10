@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: sonarqube
-  namespace: my-sonarqube
+  namespace: sonarqube
   labels:
     app: sonarqube
 spec:

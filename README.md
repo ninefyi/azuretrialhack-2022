@@ -18,23 +18,23 @@
 10. az role assignment create --assignee "answer_no_8" --role "Network Contributor" --scope subscriptions/answer_no_9/resourceGroups/rg-aks-trial
 11. az network public-ip list -g rg-aks-trial -o tsv --query "[].ipAddress"
 12. kubectl config use-context aks-trial-admin
-13. kubectl create namespace my-sonarqube
+13. kubectl create namespace sonarqube
 14. kubectl apply -f ./aks/postgres
 15. kubectl apply -f ./aks/sonarqube
-16. kubectl label namespace my-sonarqube cert-manager.io/disable-validation=true
+16. kubectl label namespace sonarqube cert-manager.io/disable-validation=true
 17. helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 18. helm repo add jetstack https://charts.jetstack.io
 19. helm repo update
 20. helm install nginx-ingress ingress-nginx/ingress-nginx \\
     --version 4.0.13 \\
-    --namespace my-sonarqube \\
+    --namespace sonarqube \\
     --set controller.replicaCount=2 \\
     --set controller.nodeSelector."kubernetes\.io/os"=linux \\
     --set defaultBackend.nodeSelector."kubernetes\.io/os"=linux \\
     --set controller.service.loadBalancerIP="answer_no_11" \\
     --set controller.service.annotations."service\.beta\.kubernetes\.io/azure-load-balancer-resource-group"="rg-aks-trial"
 21. helm install cert-manager jetstack/cert-manager \\
-    --namespace my-sonarqube \\
+    --namespace sonarqube \\
     --version "v1.7.1" \\
     --set installCRDs=true \\
     --set nodeSelector."kubernetes\.io/os"=linux
